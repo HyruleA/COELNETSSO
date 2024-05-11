@@ -1,0 +1,64 @@
+{
+  "Comida": [
+    "Quiero pedir una pizza de pepperoni para llevar.",
+    "Haz un pedido a domicilio de sushi para la cena de esta noche.",
+    "Ordena hamburguesas para la fiesta de manana.",
+    "Reserva una mesa para dos en el restaurante italiano esta noche.",
+    "Pedir comida china para llevar al trabajo.",
+    "Hacer un pedido de tacos para el almuerzo.",
+    "Encarga un pastel para el cumpleanos de mama.",
+    "Organiza la entrega de sushi variado para la fiesta.",
+    "Voy a ordenar algo ligero para el almuerzo.",
+    "Haz un pedido de comida tailandesa para llevar."
+  ],
+
+  "Musica": [
+    "Reproduce la cancion 'Bohemian Rhapsody' de Queen.",
+    "Pon musica clasica para relajarme.",
+    "Alexa, reproduce la lista de reproduccion 'Canciones para hacer ejercicio'.",
+    "Pon en pausa la musica.",
+    "Siguiente cancion, por favor.",
+    "Vuelve a reproducir la ultima cancion.",
+    "Alexa, sube el volumen al maximo.",
+    "Baja un poco el volumen de la musica.",
+    "Reproduce la estacion de radio 'Rock Clasico'.",
+    "Pon musica de jazz para ambientar la cena.",
+    "Reproduce la cancion 'Despacito'."
+  ],
+  "Dispositivos Inteligentes": [
+    "Enciende las luces del salon a las 7 de la manana.",
+    "Apaga el aire acondicionado de la habitacion.",
+    "Activa la cafetera en la cocina.",
+    "Desactiva el temporizador del horno.",
+    "Ajusta el termostato a 25 grados Celsius.",
+    "Inicia la reproduccion de musica en el altavoz del salon.",
+    "Deten la aspiradora robot en el cuarto de bano.",
+    "Sube la persiana de la ventana de la habitacion.",
+    "Baja el volumen de la television en la sala de estar.",
+    "Programa el sistema de riego para las plantas del jardin."
+  ],
+  "Compras": [
+    "Agrega papel higienico a mi carrito de compras.",
+    "Comprueba si hay ofertas en camaras fotograficas.",
+    "Busca una nueva laptop para trabajar.",
+    "Anade un par de auriculares inalambricos a mi lista de deseos.",
+    "Revisa el precio de los libros de cocina.",
+    "Encuentra un regalo de cumpleanos para mi hermana.",
+    "Explora las ofertas del dia en televisores.",
+    "Agrega una funda para el movil a mi lista de compras.",
+    "Verifica si hay descuentos en zapatillas deportivas.",
+    "Busca una mochila resistente para viajes."
+  ],
+  "Recordatorios/Alarmas": [
+    "Crea un recordatorio para llamar a mama a las 6 de la tarde.",
+    "Establece una alarma para despertarme a las 7 de la manana.",
+    "Programa un recordatorio para tomar medicamentos a las 10 de la noche.",
+    "Configura una alarma para la reunion de equipo a las 9 de la manana.",
+    "Crea un recordatorio para pagar la factura de la luz el proximo viernes.",
+    "Establece una alarma para recordarme sacar la basura a las 8 de la noche.",
+    "Programa un recordatorio para el aniversario de bodas el proximo mes.",
+    "Configura una alarma para recordarle a papa su cita medica a las 3 de la tarde.",
+    "Crea un recordatorio para comprar regalos de Navidad el proximo diciembre.",
+    "Establece una alarma para no olvidar recoger a los ninos del colegio a las 3:30."
+  ]
+}
