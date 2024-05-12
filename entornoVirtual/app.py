@@ -1,14 +1,23 @@
+import sys
+sys.path.append(r'C:/Users/Link_/Desktop/LA_II/Proyecto/COELNETSSO/entornoVirtual/OpenAI')
+import time
 from fastapi import FastAPI
 from reactpy import component, html, use_state
 from reactpy.backend.fastapi import configure
 from fastapi.staticfiles import StaticFiles
+from Clasificacion_OpenAI import clasificacionTexto
+
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="entornoVirtual/static"), name="static")
 
 @component
 def App():
+    
     input_value, set_input_value = use_state("")
+    similaridades, set_similaridades = use_state([0,0,0,0,0])
+    categoria, set_categoria = use_state("Ninguno")
+
 
     def handle_change(event):
         new_value = event['target']['value']
@@ -16,6 +25,23 @@ def App():
 
     def handle_click(event):
         print(input_value)
+        vector=clasificacionTexto(input_value)
+        print(vector)
+        set_similaridades(vector)
+        max_similitud = vector.index(max(vector))
+        cat = "No"
+        if max_similitud == 0:
+            cat = "Comida"
+        elif max_similitud == 1:
+            cat = "Musica"
+        elif max_similitud == 2:
+            cat = "Dispositivos Inteligentes"
+        elif max_similitud == 3:
+            cat = "Compras"
+        elif max_similitud == 4:
+            cat = "Recordatorios/Alarmas"
+        set_categoria(cat)
+
 
     return html.div(
         {"style": {"text-align": "left", "margin-top": "20px"}},
@@ -87,14 +113,14 @@ def App():
         ),
         html.h2("Porcentaje de similitud con cada categoría:"),  # Agregar salida de texto
         
-        html.p("Comida: "  ),
-        html.p("Música: "  ),
-        html.p("Dispositivos Inteligentes: "  ),
-        html.p("Compras: "  ),
-        html.p("Recordatorios: "  ),
+        html.p("Comida: " + str(round(similaridades[0],3))),
+        html.p("Música: " + str(round(similaridades[1],3)) ),
+        html.p("Dispositivos Inteligentes: " + str(round(similaridades[2],3))),
+        html.p("Compras: " + str(round(similaridades[3],3))),
+        html.p("Recordatorios: " + str(round(similaridades[4],3))),
         
         html.h2("Resultado:"),
-        html.p("La instrucción tiene mayos similitud semántica con la categoria: " + input_value),
+        html.p("La instrucción tiene mayor similitud semántica con la categoria: " + categoria),
     )
 
 configure(app, App)

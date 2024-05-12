@@ -4,9 +4,8 @@ from numpy.linalg import norm
 from openAIapi import obtain_embedding
 from similitud import similitud_cos
 
-def clasificationOpenAI():
+def clasificacionTexto(texto):
     dirBD = "C:/Users/Link_/Desktop/LA_II/Proyecto/COELNETSSO/entornoVirtual/BD/bd_prototipo.json"
-    texto = input("Ingresa Cadena a Clasificar: ")
 
     #Obtiene vector del texto
     vecInput = obtain_embedding(texto)
@@ -40,4 +39,4 @@ def clasificationOpenAI():
             print("El texto tiene mayor similitud semantica con la Categoría: "+ clave)
             break
         i=i+1
-    return similitudes, max_similitud
+    return similitudes
