@@ -38,16 +38,20 @@ def App():
                 print("No se pudo completar la solicitud; {0}".format(e))
                 return None
             
-    def send_instruction():    
-        set_title_text("Procesando datos, espere un momento...")
+    
 
     def handle_change(event):
         new_value = event['target']['value']
         set_input_value(new_value)
 
     def handle_click(event):
-        send_instruction()
+        set_title_text("Procesando datos, espere un momento...")
         print(input_value)
+        thread = threading.Thread(target = classif)
+        thread.start()
+        
+
+    def classif():
         vector=clasificacionTexto(input_value)
         print(vector)
         set_similaridades(vector)
@@ -68,7 +72,6 @@ def App():
 
     def handle_click2(event):
         set_title_text("Habla ahora...")
-
         thread = threading.Thread(target=recognize_speech_thread)
         thread.start()
         
